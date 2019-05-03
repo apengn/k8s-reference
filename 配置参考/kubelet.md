@@ -17,15 +17,15 @@ The Pod Lifecycle Event Generator is a function of the kubelet that creates a li
 ### 选项
 | ID | 参数 |说明 |
 | :-: | :---------- | :---------- |
-|1|--address 0.0.0.0|The IP address for the Kubelet to serve on (set to 0.0.0.0 for all IPv4 interfaces and `::` for all IPv6 interfaces) (default 0.0.0.0)|
-|2|--allow-privileged|If true, allow containers to request privileged mode.|
-|3|--alsologtostderr|log to standard error as well as files|
-|4|--anonymous-auth|Enables anonymous requests to the Kubelet server. Requests that are not rejected by another authentication method are treated as anonymous requests. Anonymous requests have a username of system:anonymous, and a group name of system:unauthenticated. (default true)|
-|5|--application-metrics-count-limit int|Max number of application metrics to store (per container) (default 100)|
-|6|--authentication-token-webhook|Use the TokenReview API to determine authentication for bearer tokens.|
-|7|--authentication-token-webhook-cache-ttl duration|The duration to cache responses from the webhook token authenticator. (default 2m0s)|
-|8|--authorization-mode string|Authorization mode for Kubelet server. Valid options are AlwaysAllow or Webhook. Webhook mode uses the SubjectAccessReview API to determine authorization. (default "AlwaysAllow")|
-|9|--authorization-webhook-cache-authorized-ttl duration|The duration to cache 'authorized' responses from the webhook authorizer. (default 5m0s)|
+|1|--address 0.0.0.0|kubelet服务监听的IP地址（设置为 0.0.0.0 监听所有IPv4地址，“::”监听所有IPv6地址）（默认 0.0.0.0）|
+|2|--allow-privileged|如果为true ，将允许容器请求特权模式|
+|3|--alsologtostderr|同时输出日志到标准错误控制台和文件|
+|4|--anonymous-auth|允许匿名请求到kubelet服务。未被其他身份验证方法拒绝的请求将被视为匿名请求。 匿名请求包含用户名system:anonymous，以及组名system:unauthenticated（默认 true）|
+|5|--application-metrics-count-limit int|应用metric保留的最大数量（每个容器）（默认 100）|
+|6|--authentication-token-webhook|使用TokenReview API鉴定令牌的身份验证|
+|7|--authentication-token-webhook-cache-ttl duration|webhook令牌身份验证器缓存响应时间。（默认 2m0s）|
+|8|--authorization-mode string|kubelet 服务的授权模式。有效的选项是AlwaysAllow或Webhook。Webhook模式使用 SubjectAccessReview API来确定授权（默认“AlwaysAllow”）|
+|9|--authorization-webhook-cache-authorized-ttl duration|webhook的已认证响应缓存时间（默认 5m0s）|
 |10|--authorization-webhook-cache-unauthorized-ttl duration|The duration to cache 'unauthorized' responses from the webhook authorizer. (default 30s)|
 |11|--azure-container-registry-config string|Path to the file container Azure container registry configuration information.|
 |12|--boot-id-file string|Comma-separated list of files to check for boot-id. Use the first one that exists. (default "/proc/sys/kernel/random/boot_id")|
